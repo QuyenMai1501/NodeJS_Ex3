@@ -7,6 +7,6 @@ export declare const env: {
     jwtRefreshSecret: string;
     accessTokenTtlSeconds: number;
     refreshTokenTtlSeconds: number;
-    refreshCookieName: string | undefined;
+    refreshCookieName: string;
 };
 //# sourceMappingURL=env.d.ts.map

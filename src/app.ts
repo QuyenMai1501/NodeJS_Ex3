@@ -2,6 +2,8 @@ import cookieParser from 'cookie-parser';
 import express from 'express';
 import { userRouters } from './modules/user/user.routes.js';
 import { errorMiddleware } from './middlewares/error.middleware.js';
+import { authRouters } from './modules/auth/auth.routes.js';
+import { productRoutes } from './modules/product/product.routes.js';
 
 export function createApp() {
     const app = express();
@@ -15,8 +17,11 @@ export function createApp() {
     // User modules
     app.use("/api/users", userRouters);
 
-    // Auth modules
-    // app.use("/api/auth", userRouters);
+    //Auth modules
+    app.use("/api/auth", authRouters);
+
+    // Product modules
+    app.use("/api/products", productRoutes);
 
     app.use(errorMiddleware);
 

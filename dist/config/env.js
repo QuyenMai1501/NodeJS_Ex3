@@ -24,6 +24,6 @@ export const env = {
     jwtRefreshSecret: required("JWT_REFRESH_SECRET"),
     accessTokenTtlSeconds: numberEnv("ACCESS_TOKEN_TTL_SECONDS", 3600),
     refreshTokenTtlSeconds: numberEnv("REFRESH_TOKEN_TTL_SECONDS", 72000),
-    refreshCookieName: process.env.REFRESH_COOKIE_NAME,
+    refreshCookieName: process.env.REFRESH_COOKIE_NAME || 'rt',
 };
 //# sourceMappingURL=env.js.map

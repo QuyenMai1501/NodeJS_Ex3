@@ -38,11 +38,7 @@ export class UserController {
         }
 
         res.json(ok({
-            id: user._id.toString(),
             email: user.email,
-            role: user.role,
-            createdAt: user.createdAt,
-            updatedAt: user.updatedAt,
         }));
     };
 

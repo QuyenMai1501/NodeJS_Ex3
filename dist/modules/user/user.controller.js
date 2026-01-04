@@ -31,11 +31,7 @@ export class UserController {
             return res.status(404).json({ message: "User not found" });
         }
         res.json(ok({
-            id: user._id.toString(),
             email: user.email,
-            role: user.role,
-            createdAt: user.createdAt,
-            updatedAt: user.updatedAt,
         }));
     };
     getById = async (req, res) => {

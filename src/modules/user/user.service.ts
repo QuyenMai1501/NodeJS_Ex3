@@ -5,6 +5,7 @@ import type { UserDoc, UserRole } from "./user.model.js";
 
 export class UserService {
     constructor(private readonly userDb: UserDatabase) { }
+    
     async list() {
         return this.userDb.list();
     }
